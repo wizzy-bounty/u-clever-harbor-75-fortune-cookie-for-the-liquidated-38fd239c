@@ -42,3 +42,14 @@ byte-identical.
 ```sh
 python3 main.py
 ```
+
+## Verify the output
+
+Run the program, then check these three things:
+
+1. It prints `chars: 82` and `words: 18`, followed by the fortune line.
+2. `entry.txt` exists in the output directory (`/output/entry.txt` by
+   default, or `$MAKEFUN_OUTPUT_DIR/entry.txt`) and contains exactly
+   that one line — no extra lines, no trailing newline.
+3. The run exits with status 0: a non-zero exit means the line failed
+   the gate or the round-trip check, and no valid output was produced.
